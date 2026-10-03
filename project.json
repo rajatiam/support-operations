@@ -1,5 +1,5 @@
 {
-  "name": "Support Desk",
+  "name": "Support Operations",
   "skills": "Ticket triage, priority queues, workflow transitions",
   "entity": "ticket",
   "fields": [
@@ -25,5 +25,7 @@
     "Docker",
     "Kubernetes",
     "GitHub Actions"
-  ]
+  ],
+  "slug": "support-operations",
+  "engineering_version": "3.0.0"
 }

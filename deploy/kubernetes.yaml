@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: 04-support-desk-data
+  name: support-operations-data
 spec:
   accessModes: [ReadWriteOnce]
   resources:
@@ -11,18 +11,18 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: 04-support-desk
+  name: support-operations
 spec:
   replicas: 1
   strategy:
     type: Recreate
   selector:
     matchLabels:
-      app: 04-support-desk
+      app: support-operations
   template:
     metadata:
       labels:
-        app: 04-support-desk
+        app: support-operations
     spec:
       securityContext:
         runAsNonRoot: true
@@ -30,7 +30,7 @@ spec:
         fsGroup: 10001
       containers:
         - name: app
-          image: 04-support-desk:local
+          image: support-operations:local
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 8104
@@ -60,15 +60,15 @@ spec:
       volumes:
         - name: data
           persistentVolumeClaim:
-            claimName: 04-support-desk-data
+            claimName: support-operations-data
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: 04-support-desk
+  name: support-operations
 spec:
   selector:
-    app: 04-support-desk
+    app: support-operations
   ports:
     - port: 80
       targetPort: 8104
