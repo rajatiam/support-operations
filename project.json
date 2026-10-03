@@ -13,5 +13,17 @@
     "status": "open"
   },
   "kind": "support",
-  "port": 8104
+  "port": 8104,
+  "description": "Triage support tickets and move issues toward resolution.",
+  "accent": "#dc6d35",
+  "stack": [
+    "Python",
+    "FastAPI",
+    "Angular",
+    "TypeScript",
+    "SQLite",
+    "Docker",
+    "Kubernetes",
+    "GitHub Actions"
+  ]
 }
