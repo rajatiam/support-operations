@@ -1,0 +1,17 @@
+{
+  "name": "Support Desk",
+  "skills": "Ticket triage, priority queues, workflow transitions",
+  "entity": "ticket",
+  "fields": [
+    "subject",
+    "priority",
+    "status"
+  ],
+  "example": {
+    "subject": "Cannot sign in",
+    "priority": "high",
+    "status": "open"
+  },
+  "kind": "support",
+  "port": 8104
+}
